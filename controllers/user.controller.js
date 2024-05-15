@@ -106,7 +106,7 @@ class Users {
     async uploadImage(req, res) {
         try {
             let avatar = await Helpers.getFilename(req.files, "avatar");
-            return res.status(200).json(Helpers.successMessage("https://interview-project-qmrg.onrender.com/uploads" + avatar))
+            return res.status(200).json(Helpers.successMessage("https://interview-project-wifn.onrender.com/uploads" + avatar))
         } catch (error) {
             return res.status(500).json(Helpers.failureMessage(error.message));
         }
