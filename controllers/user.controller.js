@@ -106,7 +106,7 @@ class Users {
     async uploadImage(req, res) {
         try {
             let avatar = await Helpers.getFilename(req.files, "avatar");
-            return res.status(200).json(Helpers.successMessage("https://interview-project-wifn.onrender.com/uploads" + avatar))
+            return res.status(200).json(Helpers.successMessage(process.env.IMAGE_BASEURL + avatar))
         } catch (error) {
             return res.status(500).json(Helpers.failureMessage(error.message));
         }
@@ -152,7 +152,7 @@ class Users {
             profileType: 2
         }
         try {
-            if (req.user.isAdmin === false) return res.status(200).json(Helpers.failureMessage("Access denied"));
+            if (req.user.isAdmin === false) return res.status(200).json(Helpers.failureMessage("You don't have Access to get private users"));
             let userData = await UserModel.findById(id);
             if (!userData) return res.status(200).json(Helpers.failureMessage("Something went wrong"));
             let users = await UserModel.find(query).select("-__v -token");
