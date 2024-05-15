@@ -1,0 +1,42 @@
+{
+  "name": "interview-project",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.5",
+    "express": "~4.16.1",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.0.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.4",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "description": "This project is made for interview purpose only.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VENKATESH-BANDARU/Interview-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VENKATESH-BANDARU/Interview-project/issues"
+  },
+  "homepage": "https://github.com/VENKATESH-BANDARU/Interview-project#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
